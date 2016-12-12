@@ -5,6 +5,7 @@ var fwpmanip_item_control_modal, fwpmanip_item_control_modal_handler;
     flush_current = false;
 
     fwpmanip_item_control_modal = function (obj) {
+
         var template_ele = $('#' + obj.modal + '-tmpl'),
             template = Handlebars.compile(template_ele.html()),
             data = {},
@@ -15,6 +16,7 @@ var fwpmanip_item_control_modal, fwpmanip_item_control_modal_handler;
             data = {config: current_items[ obj.modal ].data('config')};
             state = 'add';
         } else {
+            current_items[ obj.modal ] = null;
             flush_current = false;
             state = 'update';
             data = obj.trigger.data('default');
@@ -31,7 +33,6 @@ var fwpmanip_item_control_modal, fwpmanip_item_control_modal_handler;
     }
 
     fwpmanip_item_control_modal_handler = function (data, obj) {
-
         var item = create_item(obj.params.requestData.control, data.data),
             target;
 
