@@ -20,7 +20,7 @@ return array(
 						'size'    => 'col-xs-4',
 						'control' => array(
 							'event' => array(
-								'label'       => __( 'Hook / Action', 'facetwp-manipulator' ),
+								'label'       => __( 'FacetWP Filter', 'facetwp-manipulator' ),
 								'description' => __( 'View Documentation', 'facetwp-manipulator' ),
 								'type'        => 'select',
 								'attributes'  => array(
