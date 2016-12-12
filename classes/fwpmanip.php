@@ -132,6 +132,28 @@ class FacetWP_Manipulator {
 						'type' => 'separator',
 					),
 				),
+				'modal'       => array(
+					'id'          => 'about',
+					'label'       => __( 'About', 'facetwp-manipulator' ),
+					'description' => __( 'FacetWP Manipulator', 'facetwp-manipulator' ),
+					'width'       => 450,
+					'height'      => 620,
+					'attributes'  => array(
+						'class' => 'page-title-action',
+					),
+					'top_tabs'    => true,
+					'section'     => array(
+						'about' => array(
+							'label'   => __( 'FacetWP Manipulator', 'facetwp-manipulator' ),
+							'control' => array(
+								'about_text' => array(
+									'type'     => 'template',
+									'template' => FWPMANIP_PATH . 'includes/about-template.php',
+								),
+							),
+						),
+					),
+				),
 			),
 			'style'      => array(
 				'admin' => FWPMANIP_URL . 'assets/css/admin.css',
