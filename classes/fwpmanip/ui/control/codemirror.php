@@ -53,7 +53,7 @@ class codemirror extends \fwpmanip\ui\control\textarea {
 	public function set_assets() {
 
 		// Initilize core styles
-		$this->assets['style']['codemirror-control'] = $this->url . 'assets/controls/codemirror/codemirror' . FWPMANIP_ASSET_DEBUG . '.css';
+		$this->assets['style']['codemirror-control'] = $this->url . 'assets/css/codemirror' . FWPMANIP_ASSET_DEBUG . '.css';
 
 		// Initilize core scripts
 		$this->assets['script']['codemirror-control'] = $this->url . 'assets/controls/codemirror/codemirror' . FWPMANIP_ASSET_DEBUG . '.js';

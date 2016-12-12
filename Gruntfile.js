@@ -1,90 +1,43 @@
 module.exports = function (grunt) {
-    // Project configuration.
 
+    // Project configuration.
     grunt.initConfig({
-        pkg     : grunt.file.readJSON( 'package.json' ),
-        gitclone: {
-            clone: {
-                options: {
-                    repository: 'https://github.com/Desertsnowman/uix',
-                    branch: '2.0.x',
-                    directory: 'uix-install'
-                }
+        uglify: {
+            min: {
+                files: grunt.file.expandMapping( [
+                    'assets/**/*.js',
+                    '!assets/**/*.min.js',
+                    '!assets/**/*.min-latest.js'
+                ], 'assets/js/', {
+                    rename : function ( destBase, destPath ) {
+                        return destBase + destPath.replace( '.js', '.min.js' );
+                    },
+                    flatten: true
+                } )
             }
         },
-        shell: {
-            install: {
-                command: 'npm install --prefix ./uix-install'
+        cssmin: {
+            options: {
+                keepSpecialComments: 0
             },
-            build: {
-                command: "grunt --slug=<%= pkg.namespace %> --base ./uix-install --gruntfile ./uix-install/GruntFile.js default"
-            }
-        },
-        replace : {
-            plugin_file: {
-                src: [ '*.php', 'includes/**/*.php', 'classes/**/*.php','assets/**/*.css','assets/**/*.js' ],
-                overwrite: true,
-                replacements: [
-                    {
-                        from: "%namespace%",
-                        to: "<%= pkg.namespace %>"
-                    },
-                    {
-                        from: "%slug%",
-                        to: "<%= pkg.slug %>"
-                    },
-                    {
-                        from: "%prefix%",
-                        to: "<%= pkg.prefix %>"
-                    },
-                    {
-                        from: "%name%",
-                        to: "<%= pkg.plugin_name %>"
-                    },
-                    {
-                        from: "%description%",
-                        to: "<%= pkg.description %>"
-                    },
-                    {
-                        from: "%author%",
-                        to: "<%= pkg.author %>"
-                    },
-                    {
-                        from: "%url%",
-                        to: "<%= pkg.url %>"
-                    },
-                    {
-                        from: "%version%",
-                        to: "<%= pkg.version %>"
-                    },
-                    {
-                        from: "text-domain",
-                        to: "<%= pkg.textdomain %>"
-                    },
-                    {
-                        from: 'uix',
-                        to: "<%= pkg.namespace %>"
-                    },
-                    {
-                        from: 'UIX',
-                        to: "<%= pkg.prefix %>"
-                    }
-                ]
+            minify : {
+                expand: true,
+                cwd   : 'assets/css/',
+                src   : ['*.css', '!*.min.css'],
+                dest  : 'assets/css/',
+                ext   : '.min.css'
             }
         },
         clean: {
-            installer: ["uix-install/**"],
-        }
+            build: ["etc/**", "node_modules/**",".git/**",".gitignore","composer.json","Gruntfile.js","package.json"],
+        },
+
     });
 
     //load modules
-    grunt.loadNpmTasks( 'grunt-shell');
-    grunt.loadNpmTasks( 'grunt-contrib-copy' );
-    grunt.loadNpmTasks( 'grunt-git' );
-    grunt.loadNpmTasks( 'grunt-text-replace' );
-    grunt.loadNpmTasks( 'grunt-contrib-clean' );
-
-    //register default task
-    grunt.registerTask( 'uix', [ 'gitclone', 'shell', 'clean', 'replace' ] );
+    grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
+    grunt.loadNpmTasks( 'grunt-contrib-uglify' );
+    //installer tasks
+    grunt.registerTask( 'default', [ 'cssmin', 'uglify' ] );
 
 };
