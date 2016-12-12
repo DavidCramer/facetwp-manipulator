@@ -1,0 +1,24 @@
+.fwpmanip-control {
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+.fwpmanip-control > label {
+    display: block;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+.fwpmanip-control-input > .regular-text {
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+}
+.fwpmanip-control-description {
+    color: #666;
+    display: block;
+    font-style: italic;
+    margin: 3px 0 0;
+}
+.fwpmanip-control textarea {
+    box-sizing: border-box;
+    width: 100%;
+}

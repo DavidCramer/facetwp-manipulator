@@ -1,0 +1,32 @@
+{
+	
+	"namespace"		: "fwpmanip",
+	"plugin_name"	: "FacetWP Manipulator",
+	"description"	: "Manipulate FacetWP easily by applying custom code to FacetWP Hooks.",
+	"prefix"		: "FWPMANIP",
+	"textdomain"	: "facetwp-manipulator",
+	"version"		: "1.0.0",
+	"author"		: "David Cramer",
+	"url"			: "https://cramer.co.za",
+	"license"		: "GPLv2+",
+
+
+	"repository"	: {
+		"type"		: "git",
+		"url"		: "https://github.com/Desertsnowman/facetwp-manipulator"
+	},
+	"bugs"			: {
+		"url"		: "https://github.com/Desertsnowman/facetwp-manipulator/issues"
+	},
+	"devDependencies"			: {
+		"grunt"					: "~0.4.2",
+		"grunt-git"				: "^0.3.3",
+		"grunt-shell"			: "^1.1.1",
+		"grunt-contrib-copy"	: "^0.7.0",
+		"grunt-contrib-clean"	: "~0.7.0",
+		"grunt-text-replace"	: "^0.4.0"
+	},
+	"scripts"		: {
+		"install"	: "grunt uix"
+	}
+}
