@@ -80,7 +80,7 @@ class FacetWP_Manipulator {
 		$message = array();
 		// check if a hook is set.
 		if ( empty( $data['general']['event'] ) ) {
-			$message[] = __( 'Please select a hook.', 'facetwp-manipulator' );
+			$message[] = __( 'Please select a Filter.', 'facetwp-manipulator' );
 		}
 		// check for some code
 		if ( empty( $data['general']['code'] ) ) {

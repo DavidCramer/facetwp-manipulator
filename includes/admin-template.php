@@ -4,7 +4,7 @@
  */
 ?>
 <div class="notifier-status{{#if general/enable}}-active{{else}}-inactive{{/if}}">
-	<label><?php echo esc_html__( 'Hook', 'facetwp-manipulator' ); ?></label>
+	<label><?php echo esc_html__( 'Filter', 'facetwp-manipulator' ); ?></label>
 	<div class="def-row" title="{{general/event}}">
 		{{general/event}}&nbsp;
 	</div>
