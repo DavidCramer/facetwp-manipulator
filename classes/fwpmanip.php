@@ -169,7 +169,7 @@ class FacetWP_Manipulator {
 						'label'       => __( 'Create New Manipulator', 'facetwp-manipulator' ),
 						'description' => __( 'Configure Manipulator', 'facetwp-manipulator' ),
 						'width'       => 780,
-						'height'      => 682,
+						'height'      => 692,
 						'template'    => FWPMANIP_PATH . 'includes/admin-template.php',
 						'top_tabs'    => true,
 						'section'     => array(

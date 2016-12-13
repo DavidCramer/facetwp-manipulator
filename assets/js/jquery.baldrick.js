@@ -86,7 +86,7 @@
 				baldrickRequests[opts.params.trigger.prop('id')].abort();
 			}
 			// log
-			if( fwpmanipApi ) {
+			if( fwpmanipApi && ! opts.request.data.remote ) {
 				opts.request.beforeSend = function ( xhr ) {
 					xhr.setRequestHeader( 'X-WP-Nonce', fwpmanipApi.nonce );
 				}

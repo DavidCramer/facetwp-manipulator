@@ -10,6 +10,14 @@
  *
  */
 ?>
+<script type="text/html" id="documentation_viewer">
+{{#each this}}
+	<div style="margin: -12px; padding: 12px 14px; background: rgb(246, 246, 246) none repeat scroll 0% 0%;"><a href="{{link}}" target="_blank">{{link}}</a></div>
+	{{{content.rendered}}}
+{{/each}}
+</script>
+
+
 <script type="text/x-php" data-hook="facetwp_index_row">
 /**
  * Available Parameters

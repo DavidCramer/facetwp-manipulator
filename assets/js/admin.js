@@ -1,5 +1,35 @@
 ;(function ($) {
 
+    var initDocsModal = function(){
+        //https://facetwp.com/wp-json/wp/v2/pages?slug=facetwp_template_use_archive
+        $('.fwpmanip-control-select .fwpmanip-control-description').baldrick({
+           before : function ( el ) {
+               var hook = $('.hook-selector').val();
+               $( el ).data({
+                   request : 'https://facetwp.com/wp-json/wp/v2/pages?slug=' + hook,
+                   type: 'json',
+                   title: hook,
+                   callback : function( res ){
+                       if( res ){
+                           $('#docs_fwpmanipModal').removeClass('processing');
+                           $('#docs_fwpmanipModalContent').html( '<div class="fwpmanip-modal-sections">' + res.data + '</div>' );
+                       }
+                   },
+                   remote : true
+               });
+               setTimeout( function(){
+                   $('#docs_fwpmanipModal').addClass('processing');
+               $('#docs_fwpmanipModalContent').html( '<div class="fwpmanip-modal-sections"></div>' );
+               }, 100);
+           }
+        }).attr('data-modal', 'docs')
+            .attr('data-title', '---')
+            .attr('data-width', '750')
+            .attr('data-height', '600')
+            .attr('data-template', '#documentation_viewer' );
+
+    }
+
     $(document).on('change', '.hook-selector', function () {
         var input = $(this),
             hook = input.val(),
@@ -44,13 +74,13 @@
                 code_loader.show();
             }
         }
+        initDocsModal();
     });
-    $(document).on('click', '.fwpmanip-control-select .fwpmanip-control-description', function(){
+    $(document).on('click', '.sfwpmanip-control-select .fwpmanip-control-description', function(){
         var hook = $('.hook-selector').val();
 
         window.open('https://facetwp.com/documentation/' + hook + '/', '_blank');
 
     });
-
 
 })(jQuery);
