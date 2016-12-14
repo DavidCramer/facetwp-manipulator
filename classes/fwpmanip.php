@@ -157,9 +157,11 @@ class FacetWP_Manipulator {
 			),
 			'style'      => array(
 				'admin' => FWPMANIP_URL . 'assets/css/admin.css',
+				'prism' => FWPMANIP_URL . 'assets/css/prism.css',
 			),
 			'script'     => array(
 				'admin' => FWPMANIP_URL . 'assets/js/admin.js',
+				'prism' => FWPMANIP_URL . 'assets/js/prism.js',
 			),
 			'control'    => array(
 				'hooks' => array(

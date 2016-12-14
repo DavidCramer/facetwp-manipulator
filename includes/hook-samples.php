@@ -15,6 +15,23 @@
 	<div style="margin: -12px; padding: 12px 14px; background: rgb(246, 246, 246) none repeat scroll 0% 0%;"><a href="{{link}}" target="_blank">{{link}}</a></div>
 	{{{content}}}
 {{/each}}
+{{#script}}
+
+jQuery( function( $ ) {
+
+	var code = $('#docs_fwpmanipModalContent pre');
+
+	code.each( function(){
+		$(this).addClass('language-php');
+		Prism.highlightElement( this );
+
+	});
+
+
+
+} );
+
+{{/script}}
 </script>
 
 
