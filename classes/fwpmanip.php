@@ -137,7 +137,7 @@ class FacetWP_Manipulator {
 					'label'       => __( 'About', 'facetwp-manipulator' ),
 					'description' => __( 'FacetWP Manipulator', 'facetwp-manipulator' ),
 					'width'       => 450,
-					'height'      => 620,
+					'height'      => 550,
 					'attributes'  => array(
 						'class' => 'page-title-action',
 					),

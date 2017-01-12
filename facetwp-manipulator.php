@@ -35,19 +35,3 @@ function fwpmanip_php_ver() {
 	$message = __( 'FacetWP Manipulator requires PHP version 5.3 or later. We strongly recommend PHP 5.5 or later for security and performance reasons.', 'facetwp-minipulator' );
 	echo '<div id="fwpmanip_error" class="error notice notice-error"><p>' . $message . '</p></div>';
 }
-
-
-add_filter( 'facetwp_map_marker_args', function ( $args ) {
-	if( $args['title'] == ' Kfc' ) {
-		$args['icon'] = 'https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/KFC_logo.svg/40px-KFC_logo.svg.png';
-	}
-	if( $args['title'] == ' Spur' ){
-		$args['icon'] = 'https://upload.wikimedia.org/wikipedia/en/thumb/3/39/Spur_Steak_Ranch_logo.png/50px-Spur_Steak_Ranch_logo.png';
-	}
-	if( $args['title'] == " Nando's" ){
-		$args['icon'] = 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/Nandos_logo.svg/50px-Nandos_logo.svg.png';
-	}
-
-
-	return $args;
-} );
