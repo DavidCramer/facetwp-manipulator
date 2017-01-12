@@ -8,7 +8,7 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Manipulate FacetWP easily by adding snippets and custom code to FacetWP Hooks.
+FacetWP Manipulator allows you to add code to specific FacetWP filters and Actions to manipulate functionality without hard coding it to the theme.
 
 == Description ==
 

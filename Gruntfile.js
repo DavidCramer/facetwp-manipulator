@@ -30,6 +30,7 @@ module.exports = function (grunt) {
                     '!.gitmodules',
                     '!.gitattributes',
                     '!composer.lock',
+                    '!README.md',
                     '!naming-conventions.txt',
                     '!how-to-grunt.md',
                     '!.travis.yml',
