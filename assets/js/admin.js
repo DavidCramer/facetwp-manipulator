@@ -1,7 +1,6 @@
 ;(function ($) {
 
     var initDocsModal = function(){
-        //https://facetwp.com/wp-json/wp/v2/pages?slug=facetwp_template_use_archive
         $('.fwpmanip-control-select .fwpmanip-control-description').baldrick({
            before : function ( el ) {
                var hook = $('.hook-selector').val();
@@ -38,6 +37,8 @@
             button_link = $('.fwpmanip-control-select .fwpmanip-control-description');
             code_loader = $('.facetwp-sample-code');
 
+        // set the default value to the selection
+        input.data( 'default', hook );
         if( hook.length ){
             button_link.show();
         }else{
