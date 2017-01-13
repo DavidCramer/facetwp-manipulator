@@ -300,3 +300,14 @@ if ( isset( $translations[ $lang ][ $string ] ) ) {
 
 return $string;
 </script>
+<script type="text/x-php" data-hook="facetwp_proximity_autocomplete_options">
+/**
+ * Available Parameters
+ * $options | array | The options array for the field
+ */
+// restrict to country
+$options['componentRestrictions'] = array(
+    'country' => 'de', // country code to restrict
+);
+return $options;
+</script>

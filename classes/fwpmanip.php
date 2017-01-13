@@ -361,6 +361,12 @@ class FacetWP_Manipulator {
 					'string' => $arguments[0],
 				);
 				break;
+			case 'facetwp_proximity_autocomplete_options':
+				$set = array(
+					'options' => $arguments[0],
+				);
+				break;
+
 			default:
 				$set = $arguments;
 				break;
