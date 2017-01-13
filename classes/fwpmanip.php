@@ -366,7 +366,11 @@ class FacetWP_Manipulator {
 					'options' => $arguments[0],
 				);
 				break;
-
+			case 'facetwp_proximity_radius_options':
+				$set = array(
+					'options' => $arguments[0],
+				);
+				break;
 			default:
 				$set = $arguments;
 				break;

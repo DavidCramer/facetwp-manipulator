@@ -51,6 +51,7 @@ return array(
 									'facetwp_facet_sources'                  => 'facetwp_facet_sources',
 									'facetwp_facets'                         => 'facetwp_facets',
 									'facetwp_i18n'                           => 'facetwp_i18n',
+									'facetwp_proximity_radius_options'       => 'facetwp_proximity_radius_options',
 									'facetwp_proximity_autocomplete_options' => 'facetwp_proximity_autocomplete_options',
 								),
 							),

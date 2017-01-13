@@ -311,3 +311,14 @@ $options['componentRestrictions'] = array(
 );
 return $options;
 </script>
+<script type="text/x-php" data-hook="facetwp_proximity_radius_options">
+/**
+ * Available Parameters
+ * $options | array | The list of radiuses
+ */
+// Change the radius options list
+$options[] = 300;
+$options[] = 400;
+
+return $options;
+</script>
