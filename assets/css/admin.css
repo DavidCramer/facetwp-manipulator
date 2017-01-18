@@ -91,6 +91,6 @@
     background-color: #8FBE6D;
 }
 #docs_fwpmanipModalBody::after {
-    background: rgba(0, 0, 0, 0) url("http://build.wordpress-develop.dev/wp-content/plugins/facetwp-manipulator/assets/svg/loading.php?base_color=8FBE6D") no-repeat scroll center center;
+    background: rgba(0, 0, 0, 0) url("../svg/loading.php?base_color=8FBE6D") no-repeat scroll center center;
 }
 
